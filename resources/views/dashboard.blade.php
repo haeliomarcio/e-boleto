@@ -7,7 +7,7 @@
       <div class="small-box bg-info">
         <div class="inner">
           <h3>{{$total_users}}</h3>
-          <p>Boletos</p>
+          <p>Usuários</p>
         </div>
         <div class="icon">
           <i class="ion ion-bag"></i>
@@ -48,7 +48,7 @@
       <!-- small box -->
       <div class="small-box bg-danger">
         <div class="inner">
-          <h3>{{$total_history}}</h3>
+          <h3>{{$total_not_boletos}}</h3>
           <p>Boletos Não Enviados</p>
         </div>
         <div class="icon">

@@ -11,7 +11,7 @@
                     @include('helpers.form-search')
                 </div>
                 <div class="col-md-6 text-right">
-                    <a href="{{url('/dashboard/users/create')}}" class="btn btn-success">Novo Usuário</a>
+                    <a href="{{url('/users/create')}}" class="btn btn-success">Novo Usuário</a>
                 </div>
             </div>
             <br />
@@ -32,11 +32,11 @@
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
                             <td style="width: 180px;" class="project-actions text-right">
-                                <a class="btn btn-info btn-sm" href="{{url('/dashboard/users/edit/'.$user->id)}}">
+                                <a class="btn btn-info btn-sm" href="{{url('/users/edit/'.$user->id)}}">
                                     <i class="fas fa-pencil-alt"></i>
                                     Editar
                                 </a>
-                                <a id="confirmation-delete" data-info="{{url('/dashboard/users/delete/'.$user->id)}}" class="btn btn-danger btn-sm" href="#">
+                                <a id="confirmation-delete" data-info="{{url('/users/delete/'.$user->id)}}" class="btn btn-danger btn-sm" href="#">
                                 <!-- <a id="confirmation-delete" class="btn btn-danger btn-sm" href="{{url('/dashboard/users/delete/'.$user->id)}}"> -->
                                     <i class="fas fa-trash"></i>
                                     Deletar

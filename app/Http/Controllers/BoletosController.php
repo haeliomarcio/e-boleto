@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Client;
 use App\Models\History;
+use Illuminate\Support\Str;
 use Exception;
 use PHPMailer\PHPMailer\PHPMailer;
 
@@ -26,10 +27,12 @@ class BoletosController extends Controller
         echo "Lista de Arquivos do Diretório '<strong>".$path."</strong>':<br />";
         $list_arquivos = [];
 
+        
         while($arquivo = $diretorio->read()){
             if($arquivo !== '.' && $arquivo !== '..'){
                 $dado = explode('-', $arquivo);
-                $list_arquivos[] = [
+                $list_arquivos[Str::slug($dado[0], '_')] = [
+                    'nome_slug' => Str::slug($dado[0], '_'),
                     'nome' => $dado[0],
                     'arquivo' => $arquivo,
                     'enviado' => false,
@@ -42,25 +45,32 @@ class BoletosController extends Controller
         
         ob_start();
         foreach($listClients as $item){
-            foreach($list_arquivos as $key => $a){
-                if($item->name === $a['nome']){
-                    $list_arquivos[$key]['email'] = $item->email;
-                    // $list_arquivos[$key]['enviado'] = $this->enviaArquivo($item->id, $item->name, $item->email, $a['arquivo']);
-                    $status_envio = $this->enviaArquivo($item->id, $item->name, $item->email, $a['arquivo'], $params['competencia'], $params['mensagem']);
-                    History::updateOrCreate(
-                        ['client_id' => $item->id, 'status' => $status_envio, 'competence' => $params['competencia']],
-                        ['client_id' => $item->id, 'status' => $status_envio, 'competence' => $params['competencia']]
-                    );
+            //foreach($list_arquivos as $key => $a){
+                $name_slug = Str::slug($item->name, '_');
+                if(isset($list_arquivos[$name_slug]) && !empty($list_arquivos[$name_slug])) {
+                    //if( === $a['nome_slug']){
+                        $list_arquivos[$name_slug]['email'] = $item->email;
+                        // $list_arquivos[$key]['enviado'] = $this->enviaArquivo($item->id, $item->name, $item->email, $a['arquivo']);
+                        $status_envio = $this->enviaArquivo(
+                            $item->id, 
+                            $item->name, 
+                            $item->email, 
+                            $list_arquivos[$name_slug]['arquivo'], 
+                            $params['competencia'], 
+                            $params['mensagem']
+                        );
+                        History::updateOrCreate(
+                            ['client_id' => $item->id, 'status' => $status_envio, 'competence' => $params['competencia']],
+                            ['client_id' => $item->id, 'status' => $status_envio, 'competence' => $params['competencia']]
+                        );
+                    //}
                 }
-            }
+            //}
         }
 
     }
 
     public function enviaArquivo($id, $nome, $email, $arquivo, $competencia, $mensagem){
-        
-        echo  $nome. " - ".$email." - Enviando<br />";
-
         // Instância do objeto PHPMailer
         $mail = new PHPMailer();
         // Configura para envio de e-mails usando SMTP

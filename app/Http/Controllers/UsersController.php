@@ -122,7 +122,7 @@ class UsersController extends Controller
         $user->email = $request->input('email');  
         $user->type = $request->input('type');  
         $user->save();
-        return redirect('/dashboard/users')->with('success', 'Usuário atualizado com sucesso.');
+        return redirect('/users')->with('success', 'Usuário atualizado com sucesso.');
     }
 
     /**

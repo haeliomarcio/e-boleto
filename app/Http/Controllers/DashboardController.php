@@ -19,9 +19,9 @@ class DashboardController extends Controller
     {
         return view('dashboard', [
             'total_users' => User::count(),
-            'total_boletos' => Boleto::count(),
+            'total_boletos' => History::where('status', 1)->count(),
             'total_clients' => Client::count(),
-            'total_history' => History::count(),
+            'total_not_boletos' => History::where('status', 0)->count(),
         ]);
     }
 

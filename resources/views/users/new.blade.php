@@ -8,7 +8,7 @@
         <div class="card-body">
             <br />
             @include('helpers.messages')
-            <form method="post" action="{{url('/dashboard/users/store')}}">
+            <form method="post" action="{{url('/users/store')}}">
                 {{ csrf_field() }}
                 <div class="row">
                     <div class="col">
@@ -41,7 +41,7 @@
                 <br />
                 <div class="row">
                     <div class="col-md-6">
-                    <a href="{{url('/dashboard/users')}}" class="btn btn-warning">Cancelar</a>
+                    <a href="{{url('/users')}}" class="btn btn-warning">Cancelar</a>
                     </div>
                     <div class="col-md-6 text-right">
                         <button type="submit" class="btn btn-success">Salvar</button>
