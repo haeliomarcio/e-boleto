@@ -1,0 +1,566 @@
+@font-face {
+    font-family: vilaRoucaBold;
+    src: url(../fonts/UniviaPro-Bold.woff);
+}
+@font-face {
+    font-family: vilaRoucaLight;
+    src: url(../fonts/UniviaPro-Light.woff);
+}
+@font-face {
+    font-family: vilaRoucaBook;
+    src: url(../fonts/UniviaPro-Book.woff2);
+}
+@font-face {
+    font-family: vilaRoucaUltra;
+    src: url(../fonts/UniviaPro-Ultra.woff);
+}
+@font-face {
+    font-family: vilaRoucaRegular;
+    src: url(../fonts/UniviaPro-Regular.ttf);
+}
+
+/* Remover margens da página */
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    font-family: vilaRoucaLight;
+}
+
+/* Cor da borda do menu e alinhamento do texto */
+.navegacao {
+    box-shadow: 1px 2px #d79122;
+    text-align: center;
+}
+
+.nav-menu>li {
+    font-family: vilaRoucaBook;
+    padding: 0 0 0 30px;
+}
+
+/* Cor da borda do Menu Burger */
+.custom.navbar-toggler {
+    border-color: #fff;
+}
+
+/* Cor do Texto do Menu  */
+.navbar-light .navbar-nav .nav-link {
+    color: #000000;
+}
+
+
+/*
+.section-maps {
+    background-image: url('../images/mapa-mundi-setas.jpg');
+    background: linear-gradient(rgba(255,255,255,1.0), rgba(255,255,255,0.7)), url("../images/mapa-mundi-setas-2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: auto;
+}
+*/
+
+.blog {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-image: url("../images/curve-left-2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+}
+
+.centro {
+    display: flex;
+    /*align-items: center;*/ /*Alinhar verticalmente*/
+    justify-content: center;
+}
+
+@keyframes animationTitle{
+    from { margin-left: -500px; opacity: 0.0; }
+    to { margin-left: 0px; opacity: 0.9; }
+}
+
+.titulo {
+    animation: animationTitle 1s;
+    padding: 20px 0 0 20px;
+    font-size: 27px;
+    font-weight: normal;
+    letter-spacing: 9px;
+    text-transform: uppercase;
+    text-align: left;
+    color: #80a53d;
+
+    position: relative;
+    display: inline-block;
+}
+
+.titulo::after {
+    content: "";
+    position: absolute;
+    top: 110%; /* posição da linha abaixo do texto relativa a altura do pai */
+    left: 21;
+    width: 65%; /* comprimento da linha relativa ao tamanho do texto */
+    height: 0.2em; /* altura da linha relativa ao valor da font do pai */
+    background-color: #80a53d;
+}
+
+.subtitulo {
+    margin: 0 0 40px;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-size: 24px;
+    font-weight: normal;
+    color: #80a53d;
+}
+
+.container ul {
+    list-style: none;
+}
+
+.container ul li {
+    border: 0;
+    font-size: 100%;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+}
+
+.thumb {
+    float: left;
+}
+
+.text {
+    float: left;
+    width: 670px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 30px 40px;
+}
+
+.data {
+    display: block;
+    width: 100%;
+    margin: 0 0 10px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #d79122;
+}
+
+.chamada {
+    display: block;
+    width: 100%;
+    color: #d79122;
+}
+
+.complemento-footer {
+    width: 100%;
+    padding: 20px 0;
+    background: #f0f0f0;
+    overflow: hidden;
+    display: block;
+    border: 0;
+    font-size: 100%;
+    margin: 0;
+    outline: 0;
+}
+
+.footer {
+    width: 100%;
+    padding: 60px 0;
+    background: #333333;
+    overflow: hidden;
+    display: block;
+    border: 0;
+    font-size: 100%;
+    margin: 0;
+    outline: 0;
+}
+
+.grupo {
+    background: transparent;
+    border: 0;
+    font-size: 100%;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+}
+
+.logo {
+    width: 153px;
+    height: 50px;
+    margin: 0 0 30px;
+    display: block;
+    border: 0;
+    background-image: url("../images/logo-nova-white.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.copyright {
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+.menu-footer {
+    color: #fff;
+    font-size: 12px;
+    line-height: 2;
+}
+
+a {
+    color: #fff;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.credits {
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+.wrap {
+    margin: 0;
+    padding: 1px;
+    width: 100%;
+    background-image: url("../images/curve-top-2.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.wrap-boticario {
+    margin: 0;
+    padding: 1px;
+    width: 100%;
+    background-image: url("../images/top-o-boticario.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.wrap-cacaushow {
+    margin: 0;
+    padding: 1px;
+    width: 100%;
+    background-image: url("../images/top-o-cacau-show.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.wrap-arezzo {
+    margin: 0;
+    padding: 1px;
+    width: 100%;
+    background-image: url("../images/top-arezzo.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.wrap-tim {
+    margin: 0;
+    padding: 1px;
+    width: 100%;
+    background-image: url("../images/top-tim.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.wrap-crocs {
+    margin: 0;
+    padding: 1px;
+    width: 100%;
+    background-image: url("../images/top-crocs.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.wrap-magrella {
+    margin: 0;
+    padding: 1px;
+    width: 100%;
+    background-image: url("../images/top-magrella.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.container-sobre {
+    padding: 75px 100px;
+    background-color: #fff;
+}
+
+.video-sobre {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.marcas {
+    width: 300px;
+    height: 300px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: 0.5s;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.limite:hover .overlay {
+    opacity: 0.9;
+    transition: 0.5s;
+}
+
+.boticario-color {
+    background-color: #6FA287;
+}
+
+.cacau-show-color {
+    background-color: #2D170F;
+}
+
+.arezzo-color {
+    background-color: #545454;
+}
+
+.tim-color {
+    background-color: #004691;
+}
+
+.crocs-color {
+    background-color: #7ab50b;
+}
+
+.magrella-color {
+    background-color: #000;
+}
+
+.limite {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.cta-100 {
+    margin-top: 100px;
+    padding-left: 8%;
+    padding-top: 7%;
+  }
+
+.col-md-4{
+      padding-bottom:20px;
+}
+  
+.white {
+    color: #fff !important;
+}
+.mt{
+    float: left;margin-top: -20px;padding-top: 20px;
+}
+
+.bg-blue-ui {
+    background-color: #80a53d !important;
+}
+
+figure img{
+    width:300px;
+} 
+
+.item-carousel-blog-block {
+    outline: medium none;
+    padding: 15px;
+}
+
+.item-box-blog {
+    border: 1px solid #dadada;
+    text-align: center;
+    z-index: 4;
+    padding: 20px;
+}
+
+.item-box-blog-image {
+    position: relative;
+}
+
+.item-box-blog-image figure img {
+    width: 100%;
+    height: auto;
+}
+
+.item-box-blog-date {
+    position: absolute;
+    z-index: 5;
+    padding: 4px 20px;
+    top: -20px;
+    right: 8px;
+    background-color: #80a53d;
+}
+
+.item-box-blog-date span {
+    color: #fff;
+    display: block;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.item-box-blog-date span.mon {
+    font-size: 18px;
+}
+
+.item-box-blog-date span.day {
+    font-size: 16px;
+}
+
+.item-box-blog-body {
+    padding: 10px;
+}
+
+.item-heading-blog a h5 {
+    margin: 0;
+    line-height: 1;
+    text-decoration:none;
+    transition: color 0.3s;
+}
+
+.item-box-blog-heading a {
+    text-decoration: none;
+}
+
+.item-box-blog-data p {
+    font-size: 13px;
+}
+
+.item-box-blog-data p i {
+    font-size: 12px;
+}
+
+.item-box-blog-text {
+    max-height: 100px;
+    overflow: hidden;
+}
+
+.mt-10 {
+    float: left;
+    margin-top: -10px;
+    padding-top: 10px;
+}
+
+.btn.bg-blue-ui.white.read {
+    cursor: pointer;
+    padding: 4px 20px;
+    float: left;
+    margin-top: 10px;
+}
+
+.btn.bg-blue-ui.white.read:hover {
+    box-shadow: 0px 5px 15px inset #749636;
+}
+
+.wrapper { 
+    position: relative; 
+    width: 100%; 
+    min-height: 50px; 
+    margin: 0 auto; 
+}
+
+.box { 
+    background: #fff; 
+}
+
+[data-href] {
+    cursor: pointer;
+}
+.required::after {
+    content: ' *';
+    color: red;
+    font-size: 16px !important;
+}
+
+img.map, map area{
+    outline: none;
+}
+
+.map-top {
+    position: absolute;
+    z-index: 1000;
+    left: -60px;
+    top: -2px;
+    opacity: 0;
+}
+
+#mapper {
+    position: absolute;
+    left: -58px;
+    top: -10px;
+    opacity: 0.1;
+}
+
+@media only screen and (max-width: 500px) {
+    .navbar .container a.navbar-brand{ 
+        margin: 0 auto;
+    }
+    .navbar {
+        height: 150px !important;
+    }
+    .titulo {
+        margin-left: -70px;
+        transition: margin 1s;
+    }
+    .row .marcas {
+        margin: 0 auto;
+    }
+    .container-marcas .row a .col .row{
+        margin: 0 auto;
+    }
+    .container-sobre{
+        padding: 5px;
+    }
+    .logos .row div {
+        margin-bottom: 50px;
+    }
+    /* .maranhaoImg2 { 
+        width: 200px;
+    } */
+    .footer-logos {
+        display: none;
+    }
+    .footer .logo {
+        margin: 0 auto 25px;
+    }
+    .footer .copyright, .footer .credits {
+        text-align: center;
+    }
+    
+  }
+
+  #content-page p,  #content-page span, #content-page a {
+    font-family: vilaRoucaRegular !important;
+}

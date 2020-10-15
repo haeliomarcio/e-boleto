@@ -1,0 +1,502 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Gentil Negócios</title>
+
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="http://www.gentilnegocios.com.br/public/assets/css/main.min.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.gentilnegocios.com.br/public/assets/css/pills.min.css" />
+    <link rel="shortcut icon" href="http://www.gentilnegocios.com.br/public/assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="http://www.gentilnegocios.com.br/public/assets/img/favicon.ico" type="image/x-icon">
+
+    <meta name="title" content="Gentil Negócios" />
+    <meta name="description" content="Grandes marcas construídas com um trabalho integrado e unificadas por um princípio comum. Isso é a Gentil Negócios." />
+    <meta name="keywords" content="gentil negócios, franquias, franquia, franchising, inovação, varejo, negócios, lojas, boticário, quem disse berenice, Swarovski, sunglass hut" />
+    <meta name="author" content="Gentil Negócios" />
+    <meta name="robots" content="ALL" />
+    <meta name="distribution" content="Global" />
+    <meta name="rating" content="General" />
+    <meta name="resource-type" content="document" />
+    <meta name="revisit-after" content="1" />
+    <meta name="classification" content="" />
+    <meta name="language" content="pt-br" />
+    <meta name="doc-class" content="Completed" />
+    <meta name="doc-rights" content="Public" />
+    <meta name="ICBM" content="" />
+        <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.gentilnegocios.com.br/" />
+    <meta property="og:title" content="Gentil Negócios" />
+    <meta property="og:description" content="Grandes marcas construídas com um trabalho integrado e unificadas por um princípio comum. Isso é a Gentil Negócios." />
+    <meta property="og:image" content="http://www.gentilnegocios.com.br/public/assets/img/share.png" />
+    <meta itemprop="image" content="http://www.gentilnegocios.com.br/public/assets/img/share.png" />
+    <meta itemprop="description" content="Gentil Negócios" />
+
+    <meta name="twitter:image" content="http://www.gentilnegocios.com.br/public/assets/img/share.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="http://www.gentilnegocios.com.br/" />
+    <meta name="twitter:creator" content="@gentilnegocios" />
+    <meta name="twitter:description" content="Grandes marcas construídas com um trabalho integrado e unificadas por um princípio comum. Isso é a Gentil Negócios." />
+    </head>
+<body class="home">
+    <div class="wrap">
+        <div class="content">
+            <section class="atuacao">
+                <div class="container">
+                    <div id="mapa-interativo"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script type='text/javascript' src='http://www.gentilnegocios.com.br/public/assets/js/lib/jquery-3.2.1.min.js'></script>
+    <script type='text/javascript' src='http://www.gentilnegocios.com.br/public/assets/js/lib/jquery.customSelect.min.js'></script>
+    <script type='text/javascript' src='http://www.gentilnegocios.com.br/public/assets/js/lib/redux.min.js'></script>
+    <script type='text/javascript' src='http://www.gentilnegocios.com.br/public/assets/js/main.js'></script>
+    <script>
+        var assetsPath = 'http://www.gentilnegocios.com.br/public/assets/';
+                var localizacoes = {"natal":{"lat":-5.818172,"lng":-35.209687,"zoom":13,"sede":[{"lat":-5.818172,"lng":-35.209687,"address":"Av. Hermes da Fonseca, 880 Tirol","phone":"84 3673-5650"}],"berenice":[{"lat":-5.811173,"lng":-35.206245,"nome":"QDB Midway L1","address":"Av. Bernardo Vieira, 3775 Piso1 Lj 128A Shopping Midway - Tirol - Natal\/RN - 59.015-900","phone":"3345-2836"},{"lat":-5.841992,"lng":-35.211663,"nome":"QDB Natal Shopping","address":"Av. Senador Salgado Filho, 2234, LJ 239, Natal Shopping - Candel\u00e1ria - Natal\/RN - 59064-900","phone":"3235-8126\/3302-8330"}],"boticario":[{"lat":-5.916127,"lng":-35.260599,"nome":"Parnamirim","address":"Av. Presidente Getulio Vargas, 18 - Centro - Parnamirim\/RN - 59.140-270","phone":"3272-4974"},{"lat":-5.84166,"lng":-35.211198,"nome":"Natal Shopping","address":"Av. Sen Salgado Filho, 2964, Natal Shopping Center, LJ.245 - Lagoa Nova - Natal\/RN - 59.064-900","phone":"3207-4849"},{"lat":-5.81494,"lng":-35.211938,"nome":"Hiper Prudente","address":"Av. Prud. de Morais, 3720 Hiper Bompre\u00e7o LJ.20 - Lagoa Nova - Natal\/RN - 59.054-900","phone":"3234-4693"},{"lat":-5.85112,"lng":-35.205518,"nome":"Cidade Jardim","address":"Av. Eng. Rob. Freire, 340, LJ 15A, Shopping Cidade Jardim - Capim Macio - Natal\/RN - 59.082-400","phone":"3207-0036"},{"lat":-5.795214,"lng":-35.217927,"nome":"Amaro Barreto","address":"Rua Amaro Barreto, 1329 - Alecrim - Natal\/RN - 59.031-450","phone":"3213-7589"},{"lat":-5.78728,"lng":-35.204843,"nome":"Centro","address":"Rua Jo\u00e3o Pessoa, 263 A - Centro - Natal\/RN - 59.025-500","phone":"3201-7678"},{"lat":-5.761007,"lng":-35.252327,"nome":"Potengi","address":"Av. DR Jo\u00e3o Medeiros Filho,2774 LJ 6 CJ STA Catarina - Potengi - Natal\/RN - 59.110-200","phone":"3214-4722"},{"lat":-5.784983,"lng":-35.196342,"nome":"CCAB","address":"Av. Afonso Pena, 379 LJ 02 CCAB, Petr\u00f3polis - Natal\/RN - 59.020-100","phone":"2020-8453"},{"lat":-5.845036,"lng":-35.210936,"nome":"Carrefour","address":"RDV BR 101, KM 02, S\/N Carrefour G.C. LJ 18 - Lagoa Nova - Natal\/RN - 59.064-904","phone":"3206-8194"},{"lat":-5.86608,"lng":-35.185346,"nome":"Praia shop","address":"Av. Eng. Rob. Freire, 3132 LJ J 29 Praia Shopp - Capim Macio - Natal\/RN - 59.082-400","phone":"3345-5608"},{"lat":-5.757737,"lng":-35.247344,"nome":"Norte Shop","address":"Rua Dr. Jo\u00e3o Medeiros Filho, 2395 LJ 138, Norte Shop - Potengi - Natal\/RN - 59.110-200","phone":"3672-0507"},{"lat":-5.858821,"lng":-35.196358,"nome":"Extra","address":"Av. Eng. Rob. Freire, 1646 LJ 05 Supermecado Extra - Capim Macio - Natal\/RN - 59.082-095","phone":"3642-4390"},{"lat":-5.796401,"lng":-35.218641,"nome":"Shopping 10","address":"Rua Leonel Leite, 1377 lj 102 A Shopping 10 - Alecrim - Natal\/RN - 59.037-820","phone":"3223-5135"},{"lat":-5.793383,"lng":-35.203884,"nome":"Tirol","address":"Av. Prudente de Morais, 1140 Q 02 Sup. Nordest\u00e3o - Tirol - Natal\/RN - 59.020-510","phone":"3201-7997"},{"lat":-5.811173,"lng":-35.206245,"nome":"Midway L3","address":"Av. Bernardo Vieira, 3775 Piso3 Lj 359\/359A Shop Midway - Tirol - Natal\/RN - 59.015-900","phone":"3201-3687"},{"lat":-5.819646,"lng":-35.235059,"nome":"Rodoviaria","address":"Av. Capit\u00e3o Mor Gouveia, 1597 - Term. Rod. De Natal - Cidade da Esperan\u00e7a - Natal\/RN - 59060 - 971","phone":"3205-2438"},{"lat":-5.815708,"lng":-35.206718,"nome":"Salgado Filho","address":"Av. Senador Salgado Filho, n\u00ba 1656, Supermecado Nordest\u00e3o - Lagoa Nova - Natal\/RN - 59076-000","phone":"3201-9391"},{"lat":-5.850709,"lng":-35.205409,"nome":"Quiosque Nordest\u00e3o RF","address":"R. Leoncio Etelvino de Medeiros, 2895, Quiosque 12 \u00e1rea comum, Capim Macio - Natal\/RN - 59078-570","phone":"3302-9508"},{"lat":-5.840221,"lng":-35.209285,"nome":"Via Direta","address":"Av. Senador Salgado Filho, n\u00ba 2233, LJ 149, Via Direta Shopping - Lagoa Nova - Natal\/RN - 59076-000","phone":"3206-9016"},{"lat":-5.887502,"lng":-35.210554,"nome":"Maria Lacerda","address":"Av. Montenegro Ma\u00ba Lacerda - Nova Parnamirim - Parnamirim\/RN 59.152-600","phone":"2020-3977"},{"lat":-5.1902815,"lng":-37.3556567,"nome":"Hiper","address":"AV Diocesana 2630 loja 03 - Doze Anos ","phone":""},{"lat":-5.1745219,"lng":-37.3732323,"nome":"Partage Mossor\u00f3","address":"Av Joao da Escossia 1515 loja 111 e 112 ","phone":""},{"lat":-5.1877384,"lng":-37.3576039,"nome":"Boulevard","address":"Rua Frei Miguelinho Sn loja 06 Bloco A","phone":""},{"lat":-5.1934143,"lng":-37.3445102,"nome":"Centro","address":"Rua Coronel Vicente Saboia n\u00ba 122","phone":""},{"lat":-5.4578523,"lng":-37.5233672,"nome":"Governador DIX-SEPT- Rosado ","address":"Rua Emanuel Salviano 129 ","phone":""},{"lat":-5.1844735,"lng":-37.3669655,"nome":"Upanema","address":"Rua Francisco Marques 103","phone":""},{"lat":-5.1934143,"lng":-37.3445102,"nome":"Espa\u00e7o do Revendedor ","address":"Rua Coronel Vicente Saboia n\u00ba 122","phone":""},{"lat":-5.7952089,"lng":-35.2201158,"nome":"VD Agenso Amaro Barreto ","address":"Rua Amaro Barreto, 1329","phone":"3613-0344"},{"lat":-5.8403326,"lng":-35.2115391,"nome":"VD Agenso Via Direta ","address":"Av. Senador Salgado Filho, 2233, Loja 141, Shopping Via Direta ","phone":"3346-6412"},{"lat":-5.7578421,"lng":-35.2494128,"nome":"VD Agenso Partage ","address":"Rua Dr. Jo\u00e3o Medeiros Filho, 2395 LJ 138, Norte Shop ","phone":"3214-2406"},{"lat":-5.7806529,"lng":-35.1983013,"nome":"VD Agenso Parnamirim ","address":"Av. Presidente Get\u00falio Vargas, 18, salas 6 e 8, 1\u00ba andar ","phone":"3272-6155"},{"lat":-5.2122043,"lng":-37.3304275,"nome":"Supermercado Rebou\u00e7as Alto de S\u00e3o Manoel","address":"Av Presidente Dutra, 2530, Alto de S\u00e3o Manoel  ","phone":""},{"lat":-5.7581338,"lng":-35.2489641,"nome":"Partage Norte Shopping","address":"Rua Dr. Jo\u00e3o Medeiros Filho, 2395 LJ 138, Norte Shop - Potengi - Natal\/RN - 59.110-200","phone":"3672-0507"},{"lat":-5.8121037,"lng":-35.2083838,"nome":"Midway L1","address":"Av. Bernardo Vieira, 3775 Piso1 Lj 133A Shopping Midway - Tirol - Natal\/RN - 59.015-900","phone":"3611-3158"},{"lat":-5.7731273,"lng":-35.2654815,"nome":"S\u00e3o Gon\u00e7alo","address":"Av. Bel. Tomaz Landim, 26 LJ III - Igapo - S\u00e3o Gon\u00e7alo do Amarante\/RN - 59.290-000","phone":"3214-4249"},{"lat":-5.8594337,"lng":-35.255954,"nome":"Planalto","address":"R. Monte Rei, 765 - Planalto","phone":""},{"lat":-5.885403,"lng":-35.2313018,"nome":"SuperF\u00e1cil Ema\u00fas","address":"Rod BR 101, SN LJ 02-  Ema\u00fas - Parnamirim\/RN - 59.149-070","phone":"3272-1599"},{"lat":-5.1934396,"lng":-37.3445003,"nome":"Centro","address":"R Coronel Vicente Saboia n\u00ba 122 Bairro Centro - Mossoro RN","phone":""},{"lat":-5.1858469,"lng":-37.343596,"nome":"Rebou\u00e7as Alberto Maranh\u00e3o","address":"Av. Alberto Maranhao, 2535-Centro- Mossor\u00f3\/RN 59.600-195","phone":""},{"lat":-5.1648758,"lng":-37.3627058,"nome":"Supermercado Cidade","address":"AV ABEL COELHO, 1455, ABOLI\u00c7\u00c3O, MOSSOR\u00d3\/RN","phone":""}],"swarovski":[{"lat":-5.813997,"lng":-35.205432,"nome":"Swarovski Natal Shopping","address":"Av. Sen Salgado Filho, 2964 Natal S.Center LJ.244 Lagoa Nova - Natal\/RN - 59.064-000","phone":"3206-9207"},{"lat":-5.8112883,"lng":-35.2084243,"nome":"Midway Shopping","address":"Av. Bernardo Vieira, 3775 Piso 3 Lj 128A ","phone":""}]},"saoluis":{"lat":-2.507633,"lng":-44.282558,"zoom":13,"sede":[{"lat":-2.507633,"lng":-44.282558,"address":"Av. Professor Carlos Cunha, 3000 Jaracati","phone":"98 3212-1056"}],"berenice":[{"lat":-2.535579,"lng":-44.261485,"nome":"QDB? Ilha \/ S\u00e3o Luis","address":"Av. Daniel de La Touche, 73, Letra A,","phone":"98-3246-5567"},{"lat":-2.495652,"lng":-44.228787,"nome":"QDB? Rio Anil \/ S\u00e3o Luis","address":"AV. S\u00c3O LUIS REI DE FRAN\u00c7A, 8, LJ 1073","phone":"98-3190-1415"},{"lat":-2.5098225,"lng":-44.2870946,"nome":"QDB S\u00e3o Luis Shopping","address":"Av. Prof. Carlos Cunha, 1000, loja 133 ","phone":""}],"boticario":[{"lat":-2.501225,"lng":-44.287712,"nome":"Shopping Tropical ","address":"Av. Colares Moreira, 400,  BL.B2, LJ 05 Shop Tropical","phone":"98-3227-8799"},{"lat":-2.541672,"lng":-44.218497,"nome":"Cohab","address":"Av. Jeronimo de Albuquerque, 26-B","phone":"98-3245-3582"},{"lat":-2.529954,"lng":-44.297074,"nome":"Shopping Deodoro","address":"Rua da Paz, 673 loja 11 ","phone":"98-3222-4594"},{"lat":-2.571939,"lng":-44.235276,"nome":"Guajajaras","address":"Av. Guajajaras, 1000, ALA 1, LJ 3","phone":"98-3258-7830"},{"lat":-2.510995,"lng":-44.285418,"nome":"Shopping S\u00e3o Luis ","address":"Av. Prof. Carlos Cunha, 1000, LJ 133 S\u00e3o Luis","phone":"98-3251-3676"},{"lat":-2.520433,"lng":-44.268997,"nome":"Rua Grande","address":"Rua Grande \/ S\u00e3o Jo\u00e3o, 340, LJ 01","phone":"98-3222-4582"},{"lat":-2.547518,"lng":-44.267088,"nome":"Joao Paulo","address":"Av. S\u00e3o Marcal, 255","phone":"98-3243-3038"},{"lat":-2.537498,"lng":-44.197844,"nome":"Cohatrac","address":"Av. Leste-Oeste,N- 02, QD.12, LJ.B, ","phone":"98-3238-7603 "},{"lat":-2.508764,"lng":-44.300667,"nome":"Hiper","address":"Av. Colares Moreira,80, LJ 02 Super Hiper bom Pre\u00e7o","phone":"98-3227-0265"},{"lat":-2.56252,"lng":-44.331802,"nome":"Anjo da Guarda","address":"Av Odilo Costa Filho, No 9 Quadra 57A","phone":"98-3228-9278"},{"lat":-2.572483,"lng":-44.205237,"nome":"Cidade Oper\u00e1ria","address":"Und 203,63 - LJ  01","phone":"98-3247-6124"},{"lat":-2.512618,"lng":-44.244195,"nome":"Cohama","address":"Ave Daniel de La Touche, 104 loja 1 Quadra 9","phone":"98-3236-6957"},{"lat":-2.493196,"lng":-44.265505,"nome":"Shopping Passeio","address":"Av. Dos Holandeses, Qd 08 Lote 1 loja 3","phone":"98-3235-0021"},{"lat":-2.563556,"lng":-44.244846,"nome":"Rodoviaria","address":"Av dos Franceses 300 Terminal Rodoviario ","phone":"98-3251-3563"},{"lat":-2.495652,"lng":-44.228787,"nome":"Shopping Rio Anil","address":"Av S\u00e3o Luis Rei de Fran\u00e7a, 8,  Turu, Lj: 1050","phone":"98-3259-3494"},{"lat":-2.527377,"lng":-44.254941,"nome":"Shopping da Ilha","address":"AV. Daniel de La Touche, 987 - Loja 215\/E, Cohama ","phone":"98-3246-0654"},{"lat":-2.535579,"lng":-44.261485,"nome":"Mateus Cohama","address":"Av. Daniel de La Touche, 73, Letra A,","phone":"98-3256-9173"},{"lat":-2.498378,"lng":-44.228927,"nome":"Quiosque Turu","address":"Av. S\u00e3o Luis Reis de Fran\u00e7a","phone":""},{"lat":-2.506703,"lng":-44.282126,"nome":"Shopping S\u00e3o Luis 2","address":"Av. Professor Carlos Cunha, n\u00ba 10","phone":"98-32688973"},{"lat":-2.5533,"lng":-44.222991,"nome":"VD Patio Norte","address":"Estrada de Ribamar, n\u00ba 05, Lote 3","phone":"98-32375227"},{"lat":-2.572197,"lng":-44.234783,"nome":"VD Maraj\u00f3","address":"Av. Guajajaras, n\u00ba 30, loja 66","phone":"98-3259-7064"},{"lat":-2.541727,"lng":-44.284831,"nome":"VD Kennedy","address":"Av. Guaxenduba, n\u00ba 905, loja 01; Kennedy","phone":"98-3231-5412"},{"lat":-2.500718,"lng":-44.228556,"nome":"VD TURU","address":"AV. S\u00e3o Luis Reis de Fran\u00e7a","phone":""},{"lat":-2.4909051,"lng":-44.2573504,"nome":"Shopping do Autom\u00f3vel","address":"Av. Dos Holandeses, 001- Q36","phone":""},{"lat":-2.5585897,"lng":-44.0584579,"nome":"P\u00e1tio Norte","address":"Av. Gon\u00e7alves Dias, 611","phone":"98-3224-2170"},{"lat":-2.5270038,"lng":-44.2480556,"nome":"Rua Grande II","address":"","phone":"98-3236-2951"}],"swarovski":[{"lat":-2.527377,"lng":-44.254941,"nome":"Swarovski Shopping Ilha","address":"Av Daniel de La Touche, 987, Loja 320, M , Jap\u00e3o Bairro Cohama , S\u00e3o Luis \/MA","phone":""}]},"saopaulo":{"lat":-23.575172,"lng":-46.687608,"zoom":13,"sede":[{"lat":-23.575172,"lng":-46.687608,"address":"Rua Fid\u00eancio Ramos, 100 Vila Ol\u00edmpia","phone":""}]},"fortaleza":{"lat":-3.5554498,"lng":-38.8339408,"zoom":10,"sede":[],"swarovski":[{"lat":-3.740938,"lng":-38.471875,"nome":"Swarovski Rio Mar Fortaleza","address":"Rua Desembargador Lauro Nogueira n\u00ba1355","phone":"(85)3265-7414"},{"lat":-3.756414,"lng":-38.491327,"nome":"Swarovski Iguatemi","address":"AV. Washington Soares n\u00ba85, loja 680, bairro: edson queiroz cep\u00b4: 60.811-900","phone":"(85)3038-0119"}],"boticario":[{"lat":-3.409159,"lng":-39.030507,"nome":"Paracuru - CE","address":"Raimundo Moreira Lima,42","phone":"(85) 3344-1455"},{"lat":-3.435804,"lng":-39.148028,"nome":"Paraipaba - CE","address":"Av. Maria Moreira,159","phone":"(85) 3363-1756"},{"lat":-3.6075563,"lng":-38.9684722,"nome":"S\u00e3o Gon\u00e7alo do Amarante - CE ","address":"Av Coronel Neco Martins N\u00ba68","phone":""},{"lat":-3.3020983,"lng":-39.2187651,"nome":"Trairi - CE ","address":"Rua Manoel Teixeira n\u00ba00150 loja 01","phone":""},{"lat":-3.793554,"lng":-39.2722812,"nome":"Pentecoste","address":"Av Jose de Borba Vasconcelos, Pentecoste, CE","phone":""},{"lat":-3.5554498,"lng":-38.8339408,"nome":"Pec\u00e9m","address":"Av Antonio Brasileiro, 948","phone":""}]},"Para\u00edba":{"lat":-7.217415,"lng":-35.8861237,"zoom":10,"sede":[],"boticario":[{"lat":-7.2353155,"lng":-35.8723306,"nome":"Partage Campina Grande","address":"Av. Prefeito Severino Cabral, 1050, Loja 2023 e 2024, Catol\u00e9 - C. Grande\/PB - Cep. 58410-185","phone":""},{"lat":-7.2346709,"lng":-35.8790103,"nome":"Shopping Luiza Motta","address":"Rua Vig\u00e1rio Calixto, 1395, loja 128","phone":""},{"lat":-7.213431,"lng":-35.8872267,"nome":"Supermercado Ideal","address":"Rua Vigolvino Wanderley, 290, Loja 2, Concei\u00e7\u00e3o - C. Grande\/PB - Cep. 58041-311","phone":""},{"lat":-7.213431,"lng":-35.885038,"nome":"RedeCompras","address":"Rua Cel Jo\u00e3o Louren\u00e7o Porto, 374 Malvin","phone":""},{"lat":-7.2464224,"lng":-35.9112934,"nome":"Malvinas","address":"Av Francisco Lopes de Almeida, 7, letra B.","phone":""},{"lat":-7.2354456,"lng":-35.8701328,"nome":"Espa\u00e7o do Revendedor O Botic\u00e1rio Partage Campina Grande","address":"Avenida Severino Bezerra Cabral, 1050, Catol\u00e9","phone":""},{"lat":-7.225022,"lng":-35.8809191,"nome":"Espa\u00e7o do Revendedor Centro","address":"Largo Prefeito Severino Procopio, 76","phone":""},{"lat":-7.2187966,"lng":-35.8864732,"nome":"Ven\u00e2ncio Neiva","address":"Rua Venancio Neiva, 85, Centro - C. Grande","phone":""},{"lat":-7.217415,"lng":-35.8861237,"nome":"Maciel Pinheiro","address":"Rua Maciel Pinheiro, 248, Centro - C. Grande - 58400-100","phone":""}],"berenice":[{"lat":-7.2354456,"lng":-35.8701328,"nome":"Partage Campina Grande","address":"Avenida Severino Bezerra Cabral, 1050","phone":""}]}};
+                $(document).ready(function(){
+            $('.btn-menu-trigger').click(function(){
+                $('.nav').addClass('on');
+            });
+
+            $('.btn-close').click(function(){
+                $('.nav').removeClass('on');
+            });
+        })
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-100235975-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+        <script src="http://www.gentilnegocios.com.br/public/assets/js/lib/phaser.min.js"></script>
+    <script src="http://www.gentilnegocios.com.br/public/assets/js/dist/Observer.js"></script>
+    <script src="http://www.gentilnegocios.com.br/public/assets/js/dist/Game.js"></script>
+    <script src="http://www.gentilnegocios.com.br/public/assets/js/dist/MapaInterativo.js"></script>
+    <script>
+        'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var MapaInterativo = function () {
+    function MapaInterativo() {
+        _classCallCheck(this, MapaInterativo);
+    }
+
+    _createClass(MapaInterativo, [{
+        key: 'preload',
+        value: function preload() {
+            this.HIDDEN = 0;
+            this.ANIMATING = 1;
+            this.SHOW = 2;
+
+            this.ctrl = { statusEstados: this.HIDDEN, statusMarcas: this.HIDDEN };
+            this.estados = {};
+            this.marcas = {};
+
+            this.game.load.image('maranhao', '/teste/sprite-maranhao.png');
+            //this.game.load.image('pernambuco', 'public/assets/img/mapai/sprite-pernambuco.png');
+            this.game.load.image('rio-grande-norte', 'http://www.gentilnegocios.com.br/public/assets/img/mapai/sprite-rio-grande-norte.png');
+            this.game.load.image('ceara', 'http://www.gentilnegocios.com.br/public/assets/img/mapai/sprite-ceara.png');
+            this.game.load.image('paraiba', 'http://www.gentilnegocios.com.br/public/assets/img/mapai/sprite-paraiba.png');
+
+            this.game.load.image('berenice', 'http://www.gentilnegocios.com.br/public/assets/img/mapai/sprite-berenice.png');
+            this.game.load.image('boticario', 'http://www.gentilnegocios.com.br/public/assets/img/mapai/sprite-boticario.png');
+            //this.game.load.image('sunglass', 'public/assets/img/mapai/sprite-sunglass.png');
+            this.game.load.image('swarovski', 'http://www.gentilnegocios.com.br/public/assets/img/mapai/sprite-swarovski.png');
+        }
+    }, {
+        key: 'create',
+        value: function create() {
+            var game = this.game,
+                estados = this.estados,
+                marcas = this.marcas;
+
+
+            estados.ma = game.add.sprite(410, 260, 'maranhao');
+            estados.ce = game.add.sprite(610, 275, 'ceara');
+            estados.rn = game.add.sprite(686, 305, 'rio-grande-norte');
+            estados.pa = game.add.sprite(678, 318, 'paraiba');
+            //estados.pe = game.add.sprite(550, 335, 'pernambuco');
+
+            marcas.boticario = game.add.sprite(240, 66, 'boticario');
+            marcas.berenice = game.add.sprite(400, 70, 'berenice');
+            //marcas.sunglass = game.add.sprite(560, 70, 'sunglass');
+            //marcas.swarovski = game.add.sprite(720, 52, 'swarovski');
+            marcas.swarovski = game.add.sprite(560, 70, 'swarovski');
+
+            var ma = estados.ma,
+                ce = estados.ce,
+                //pe = estados.pe,
+                rn = estados.rn,
+                pa = estados.pa;
+            var berenice = marcas.berenice,
+                boticario = marcas.boticario,
+                //sunglass = marcas.sunglass,
+                swarovski = marcas.swarovski;
+
+
+            ma.lastPosition = { x: ma.x - 70, y: ma.y - 100 };
+            ce.lastPosition = { x: ce.x - 50, y: ce.y - 110 };
+            //pe.lastPosition = { x: pe.x - 20, y: pe.y - 90 };
+            rn.lastPosition = { x: rn.x - 20, y: rn.y - 110 };
+            pa.lastPosition = { x: pa.x - 30, y: pa.y - 100 };
+
+            ma.marcas = ['berenice', 'boticario', 'swarovski'];
+            //ma.marcas = ['berenice', 'boticario', 'sunglass', 'swarovski'];
+            ce.marcas = ['swarovski'];
+            //pe.marcas = ['swarovski'];
+            rn.marcas = ['berenice', 'boticario', 'swarovski'];
+            //rn.marcas = ['berenice', 'boticario', 'sunglass', 'swarovski'];
+            pa.marcas = ['boticario'];
+
+            berenice.estados = ['ma', 'rn'];
+            boticario.estados = ['ma', 'ce', 'pa'];
+            //sunglass.estados = ['ma', 'rn'];
+            swarovski.estados = ['ma', 'ce', 'rn'];
+
+            for (var estado in this.estados) {
+                this.estados[estado].startPosition = {
+                    x: this.estados[estado].x,
+                    y: this.estados[estado].y
+                };
+
+                this.estados[estado].inputEnabled = true;
+                this.estados[estado].input.pixelPerfectOver = true;
+                this.estados[estado].input.useHandCursor = true;
+            }
+
+            for (var marca in this.marcas) {
+                this.marcas[marca].startPosition = {
+                    x: this.marcas[marca].x,
+                    y: this.marcas[marca].y
+                };
+
+                this.marcas[marca].lastPosition = {
+                    x: this.marcas[marca].x,
+                    y: this.marcas[marca].y - 20
+                };
+
+                this.marcas[marca].scale.setTo(0.0, 0.0);
+
+                this.marcas[marca].inputEnabled = true;
+                this.marcas[marca].input.pixelPerfectOver = true;
+                this.marcas[marca].input.useHandCursor = true;
+                this.marcas[marca].anchor.set(0.5);
+            }
+
+            Observer.signal('mapa-start', this.start.bind(this));
+            Observer.signal('mapa-finish', this.finish.bind(this));
+            Observer.emit('mapa-ready');
+        }
+    }, {
+        key: 'update',
+        value: function update() {
+            var estados = this.estados,
+                marcas = this.marcas;
+
+
+            for (var estado in estados) {
+                if (estados[estado].input.pointerOver()) {
+                    this.onMouseInEstado(estado);
+                } else {
+                    this.onMouseOutEstado(estado);
+                }
+            }
+
+            for (var marca in marcas) {
+                if (marcas[marca].input.pointerOver()) {
+                    this.onMouseInMarca(marca);
+                } else {
+                    this.onMouseOutMarca(marca);
+                }
+                marcas[marca].events.onInputDown.add(this.onClickMarca, this);
+            }
+        }
+    }, {
+        key: 'start',
+        value: function start() {
+            this.mostrarEstados();
+            this.mostrarMarcas();
+        }
+    }, {
+        key: 'finish',
+        value: function finish() {
+            this.esconderEstados();
+            this.esconderMarcas();
+        }
+    }, {
+        key: 'onClickMarca',
+        value: function onClickMarca(evt) {
+            Observer.emit('clicou-marca', evt.key);
+        }
+    }, {
+        key: 'mostrarMarcas',
+        value: function mostrarMarcas() {
+            var _this = this;
+
+            var game = this.game,
+                marcas = this.marcas;
+            var berenice = marcas.berenice,
+                boticario = marcas.boticario,
+                //sunglass = marcas.sunglass,
+                swarovski = marcas.swarovski;
+
+            if (this.ctrl.statusMarcas === this.HIDDEN) {
+                this.ctrl.statusMarcas = this.ANIMATING;
+                var easing = Phaser.Easing.Quartic.Out;
+                var time = 1000;
+                var animation = { x: 1, y: 1 };
+
+                game.add.tween(berenice.scale).to(animation, time, easing, true, 0);
+
+                game.add.tween(boticario.scale).to(animation, time, easing, true, 100);
+
+                //game.add.tween(sunglass.scale).to(animation, time, easing, true, 150);
+
+                game.add.tween(swarovski.scale).to(animation, time, easing, true, 200).onComplete.add(function () {
+                    _this.ctrl.statusMarcas = _this.SHOW;
+                }, this);
+            }
+        }
+    }, {
+        key: 'esconderMarcas',
+        value: function esconderMarcas() {
+            var _this2 = this;
+
+            var game = this.game,
+                marcas = this.marcas;
+            var berenice = marcas.berenice,
+                boticario = marcas.boticario,
+                //sunglass = marcas.sunglass,
+                swarovski = marcas.swarovski;
+
+            if (this.ctrl.statusMarcas === this.SHOW) {
+                this.ctrl.statusMarcas = this.ANIMATING;
+                var easing = Phaser.Easing.Quartic.Out;
+                var time = 900;
+                var animation = { x: 1.1, y: 1.1 };
+
+                game.add.tween(berenice.scale).to(animation, time, easing, true, 0);
+
+                game.add.tween(boticario.scale).to(animation, time, easing, true, 100);
+
+                //game.add.tween(sunglass.scale).to(animation, time, easing, true, 150);
+
+                game.add.tween(swarovski.scale).to(animation, time, easing, true, 200).onComplete.add(function () {
+                    _this2.ctrl.statusMarcas = _this2.HIDDEN;
+                }, this);
+            }
+        }
+    }, {
+        key: 'mostrarEstados',
+        value: function mostrarEstados() {
+            var _this3 = this;
+
+            var game = this.game,
+                estados = this.estados,
+                ctrl = this.ctrl;
+            var ma = estados.ma,
+                ce = estados.ce,
+                rn = estados.rn,
+                //pe = estados.pe,
+                pa = estados.pa;
+
+
+            if (ctrl.statusEstados === this.HIDDEN) {
+                ctrl.statusEstados = this.ANIMATING;
+
+                game.add.tween(ma).to(ma.lastPosition, 1500, Phaser.Easing.Quartic.InOut, true, 0);
+
+                game.add.tween(ce).to(ce.lastPosition, 1500, Phaser.Easing.Quartic.InOut, true, 100);
+
+                game.add.tween(rn).to(rn.lastPosition, 1500, Phaser.Easing.Quartic.InOut, true, 150);
+
+                game.add.tween(pa).to(pa.lastPosition, 1500, Phaser.Easing.Quartic.InOut, true, 200);
+
+                // game.add.tween(pe).to(pe.lastPosition, 1500, Phaser.Easing.Quartic.InOut, true, 250).onComplete.add(function () {
+                //     _this3.ctrl.statusEstados = _this3.SHOW;
+                // }, this);
+            }
+        }
+    }, {
+        key: 'esconderEstados',
+        value: function esconderEstados() {
+            var _this4 = this;
+
+            var game = this.game,
+                estados = this.estados,
+                ctrl = this.ctrl;
+            var ma = estados.ma,
+                ce = estados.ce,
+                rn = estados.rn,
+                pe = estados.pe;
+
+
+            if (ctrl.statusEstados === this.SHOW) {
+                ctrl.statusEstados = this.ANIMATING;
+                game.add.tween(ma).to(ma.startPosition, 1500, Phaser.Easing.Quartic.InOut, true, 0);
+
+                game.add.tween(ce).to(ce.startPosition, 1500, Phaser.Easing.Quartic.InOut, true, 100);
+
+                game.add.tween(rn).to(rn.startPosition, 1500, Phaser.Easing.Quartic.InOut, true, 150);
+
+                game.add.tween(pa).to(pa.startPosition, 1500, Phaser.Easing.Quartic.InOut, true, 200);
+
+                game.add.tween(pe).to(pe.startPosition, 1500, Phaser.Easing.Quartic.InOut, true, 250).onComplete.add(function () {
+                    _this4.ctrl.statusEstados = _this4.HIDDEN;
+                }, this);
+            }
+        }
+    }, {
+        key: 'onMouseInEstado',
+        value: function onMouseInEstado(estado) {
+            var estados = this.estados;
+
+            if (!estados[estado].mouse) {
+                this.estados[estado].mouse = true;
+                this.opacidadeEstados(0.2);
+                this.opacidadeMarcas(0.2);
+                this.destacarEstado(estado);
+                estado = this.estados[estado];
+
+                for (var i = 0; i < estado.marcas.length; i++) {
+                    this.destacarMarca(estado.marcas[i], 50 * i);
+                }
+            }
+        }
+    }, {
+        key: 'onMouseOutEstado',
+        value: function onMouseOutEstado(estado) {
+            var estados = this.estados;
+
+            if (estados[estado].mouse) {
+                estados[estado].mouse = false;
+                this.opacidadeEstados(1);
+                this.opacidadeMarcas(1);
+                this.mesclarEstado(estado);
+
+                estado = this.estados[estado];
+                for (var i = 0; i < estado.marcas.length; i++) {
+                    this.mesclarMarca(estado.marcas[i], 50 * i);
+                }
+            }
+        }
+    }, {
+        key: 'onMouseInMarca',
+        value: function onMouseInMarca(marca) {
+            var marcas = this.marcas;
+
+            if (!marcas[marca].mouse) {
+                this.marcas[marca].mouse = true;
+                this.opacidadeEstados(0.2);
+                this.opacidadeMarcas(0.2);
+                this.destacarMarca(marca);
+                marca = this.marcas[marca];
+
+                for (var i = 0; i < marca.estados.length; i++) {
+                    this.destacarEstado(marca.estados[i], 50 * i);
+                }
+            }
+        }
+    }, {
+        key: 'onMouseOutMarca',
+        value: function onMouseOutMarca(marca) {
+            var marcas = this.marcas;
+
+            if (marcas[marca].mouse) {
+                this.marcas[marca].mouse = false;
+                this.opacidadeEstados(1);
+                this.opacidadeMarcas(1);
+                this.mesclarMarca(marca);
+                marca = this.marcas[marca];
+
+                for (var i = 0; i < marca.estados.length; i++) {
+                    this.mesclarEstado(marca.estados[i], 50 * i);
+                }
+            }
+        }
+    }, {
+        key: 'destacarEstado',
+        value: function destacarEstado(estado) {
+            this.game.add.tween(this.estados[estado]).to({
+                y: this.estados[estado].lastPosition.y - 5,
+                alpha: 1
+            }, 300, Phaser.Easing.Quartic.InOut, true, 0);
+        }
+    }, {
+        key: 'mesclarEstado',
+        value: function mesclarEstado(estado) {
+            this.game.add.tween(this.estados[estado]).to({
+                y: this.estados[estado].lastPosition.y
+            }, 300, Phaser.Easing.Quartic.InOut, true, 0);
+        }
+    }, {
+        key: 'destacarMarca',
+        value: function destacarMarca(marca, delay) {
+            marca = this.marcas[marca];
+            var animacao = {
+                // x: marca.lastPosition.x,
+                // y: marca.lastPosition.y,
+                alpha: 1
+            };
+
+            this.game.add.tween(marca).to(animacao, 300, Phaser.Easing.Quartic.InOut, true, delay || 0);
+
+            this.game.add.tween(marca.scale).to({ x: 1.1, y: 1.1 }, 300, Phaser.Easing.Quartic.InOut, true, delay || 0);
+        }
+    }, {
+        key: 'mesclarMarca',
+        value: function mesclarMarca(marca, delay) {
+            marca = this.marcas[marca];
+
+            this.game.add.tween(marca).to(marca.startPosition, 300, Phaser.Easing.Quartic.InOut, true, delay || 0);
+
+            this.game.add.tween(marca.scale).to({ x: 1, y: 1 }, 300, Phaser.Easing.Quartic.InOut, true, delay || 0);
+        }
+    }, {
+        key: 'opacidadeEstados',
+        value: function opacidadeEstados(alpha) {
+            for (var e in this.estados) {
+                this.game.add.tween(this.estados[e]).to({
+                    alpha: alpha
+                }, 300, Phaser.Easing.Quartic.InOut, true, 0);
+            }
+        }
+    }, {
+        key: 'opacidadeMarcas',
+        value: function opacidadeMarcas(alpha) {
+            for (var m in this.marcas) {
+                this.game.add.tween(this.marcas[m]).to({
+                    alpha: alpha
+                }, 300, Phaser.Easing.Quartic.InOut, true, 0);
+            }
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            // let { game } = this;
+            // game.debug.spriteInputInfo(this.sprite.ma, 32, 32);
+            // game.debug.geom(this.sprite.ma.input._tempPoint);
+        }
+    }]);
+
+    return MapaInterativo;
+}();
+//# sourceMappingURL=MapaInterativo.js.map
+
+    </script>
+    <script src="http://www.gentilnegocios.com.br/public/assets/js/mapa-home.js"></script>
+</body>
+</html>
