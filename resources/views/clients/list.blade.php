@@ -24,7 +24,7 @@
                 <thead>
                 <tr>
                     <th style="width: 10px">#</th>
-                    <th style="width: 10px"># CheckBox</th>
+                    <th style="width: 10px">#</th>
                     <th>Nome</th>
                     <th>E-mail</th>
                     <th style="width: 40px">Ações</th>
@@ -34,7 +34,9 @@
                     @foreach ($list as $item)
                         <tr>
                             <td>{{ $item->id }}</td>
-                            <td>CheckBox</td>
+                            <td>
+                                <input class="select-client" type="checkbox" name="clients[]" value="{{$item->id}}" />
+                            </td>
                             <td>{{ $item->name }}</td>
                             <td>{{ $item->email }}</td>
                             <td style="width: 180px;" class="project-actions text-right">
@@ -98,6 +100,20 @@
 @endsection 
 @section('scripts')
     <script>
+        var listClients = [];
+       
+        $(".select-client").change(function() {
+            var id = $(this).val();
+            if($(this).prop('checked')) {
+                listClients.push(id);
+            } else {
+                var idx = listClients.indexOf(id);
+                if(idx != -1) {
+                    listClients.splice(idx, 1);
+                }
+            }
+        });
+
         $("#loader").css('display', 'none');
         $("#enviarBoletos").click(function() {
             var crsf = "<?php echo csrf_token(); ?>";
@@ -117,7 +133,12 @@
             $.ajax({
                 type: 'POST',
                 url: "/boletos/enviar-boletos",
-                data: { 'competencia': competencia, 'crsf_token': crsf, 'mensagem': mensagem },
+                data: { 
+                    'competencia': competencia, 
+                    'crsf_token': crsf, 
+                    'mensagem': mensagem,
+                    'clients': listClients,
+                },
                 headers: {
                     'X-CSRF-TOKEN': crsf
                 },

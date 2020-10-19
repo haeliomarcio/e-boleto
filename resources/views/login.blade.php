@@ -7,18 +7,18 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <style>
         body {
-            color: #fff;
-            background: #333333;
+            color: #000;
+            background: #FFF;
 
             overflow: hidden;
         }
         .btn {
-            color: #fff;
+            color: #000;
             border: 1px solid #fff;
             background-color: none !important;
         }
         .btn:hover {
-            color: #ccc;
+            color: #000;
         }
     </style>
 
@@ -32,8 +32,8 @@
                 @csrf
                 <div class="text-center mb-4">
                     <!-- <img class="mb-4" src="/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
-                    <!-- <h1 class="h3 mb-3 font-weight-normal">Login - {{config('app.name')}}</h1> -->
-                    <!-- <p><img  width= "300px" src="{{url('/images/logo-nova-white.png')}}" alt="" /></p> -->
+                    <h1 class="h3 mb-3 font-weight-normal">Login - {{config('app.name')}}</h1>
+                    <p><img  width= "200px" src="{{url('/images/logomarca.jpeg')}}" alt="" /></p>
                     <br>
                 </div>
 

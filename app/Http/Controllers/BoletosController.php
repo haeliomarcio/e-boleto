@@ -16,7 +16,13 @@ class BoletosController extends Controller
 
     public function enviarBoletos() {
         $params = request()->all();
-        $listClients = Client::all();
+        
+        if(isset($params['clients']) && !empty($params['clients'])) {
+            $listClients = Client::whereIn('id', $params['clients'])->get();
+        } else {
+            $listClients = Client::all();
+        }      
+        
         $path = base_path("public_html/files/". $params['competencia']);
         try {
             $diretorio = dir($path);

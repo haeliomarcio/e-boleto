@@ -17,6 +17,7 @@ class CreateClientsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
@@ -28,6 +29,9 @@ class CreateClientsTable extends Migration
      */
     public function down()
     {
+        Schema::table('clients', function (Blueprint $table) {
+            $table->dropSoftDeletes();
+        });
         Schema::dropIfExists('clients');
     }
 }

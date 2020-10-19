@@ -19,8 +19,7 @@ class CreateHistoryTable extends Migration
             $table->string('competence');
             $table->string('status');
             $table->timestamps();
-
-            $table->foreign('client_id')->references('id')->on('clients');
+            // $table->foreign('client_id')->references('id')->on('clients');
         });
     }
 

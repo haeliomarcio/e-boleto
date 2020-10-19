@@ -116,13 +116,13 @@ class ClientsController extends Controller
         $context = $this->model->find($id);
         if($context) {
             if($context->delete()) {
-                Storage::disk('site')->delete($context->path_image);
+                // Storage::disk('site')->delete($context->path_image);
                 return back()
                 ->with('success', 'Cliente '. $context->name. ' removido com sucesso');
             }
         }
         return back()
-            ->with('error', 'Erro ao remover notícia');
+            ->with('error', 'Erro ao remover cliente.');
     }
 
     public function carregarClientes() {
