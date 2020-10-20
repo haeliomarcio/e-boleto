@@ -109,14 +109,19 @@ class BoletosController extends Controller
         // Endereço do e-mail do destinatário
         $mail->addAddress($email);
         // Assunto do e-mail
-        $mail->Subject = 'Boleto - Plano de Saúde Hapvida | ASSC'; 
+        $mail->Subject = 'Referente a '.date('m/Y', strtotime('+1 months')); 
         // Mensagem que vai no corpo do e-mail
         // echo '<pre>'; print_r($arquivo); die;
-        $mail->Body = '<h1>Mensagem enviada via Rialci Consultoria</h1>';
-        $mail->Body .= "<br /><br />".$mensagem. "<br /><br />";
+        $mail->Body = '<h4>Prezado(a) '.$nome ;
+        $mail->Body .= ',';
+        $mail->Body .= '<br /><br />Gostaríamos de avisá-lo que seu boleto referente a '.date('m/Y', strtotime('+1 months'));
+        $mail->Body .= ' já está disponível! <br /> Para acessá-lo, basta clicar no link abaixo ou copiar e colar no navegador!';
         $arquivo = str_replace(" ", "_", $arquivo);
-        $mail->Body .= 'Link do Boleto:<br /> http://localhost:8000/boleto/?boleto='.$arquivo."&competencia=".$competencia;
-        $mail->Body .= 'Link do Boleto:<br /> http://localhost:8000/boleto/?boleto='.$arquivo."&competencia=".$competencia;
+        $mail->Body .= '<br /><br />Seu boleto:<br /> http://www.rialci.com.br/envioboleto/boleto.php?boleto='.$arquivo;
+        $mail->Body .= '<br /><br />'.$mensagem. '<br />';
+        $mail->Body .= '<br />Att. ASSC | Associação de Saúde dos Servidores Civis';
+        $mail->Body .= '<br />assc@rialci.com.br | 3261-7662 | 988881735 (Whatsapp)<br />';
+
         
         // Envia o e-mail e captura o sucesso ou erro
         sleep(2);
