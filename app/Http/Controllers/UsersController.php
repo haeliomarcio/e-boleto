@@ -63,8 +63,8 @@ class UsersController extends Controller
         if ($this->services->isCheckPermission('users', 'admin')) {
             return $this->services->redirectUserNotAuthorization();
         }
-        User::create($request);
-        return redirect('users.list')->with('success', 'Usuário criado com sucesso.');
+        User::create($request->all());
+        return redirect('/users')->with('success', 'Usuário criado com sucesso.');
     }
 
     /**

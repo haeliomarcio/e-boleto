@@ -39,11 +39,8 @@ Route::middleware(['auth'])->group(function () {
             Route::get('delete/{id}', 'UsersController@destroy');
         });
 
-        Route::prefix('boleto')->group(function () {
-            Route::get('', 'BoletosController@boleto');
-        });
-
         Route::prefix('boletos')->group(function () {
+            Route::get('', 'BoletosController@boleto');
             Route::post('enviar-boletos', 'BoletosController@enviarBoletos');
         });
 

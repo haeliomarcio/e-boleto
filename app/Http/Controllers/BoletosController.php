@@ -8,13 +8,13 @@ use Illuminate\Support\Str;
 use Exception;
 use PHPMailer\PHPMailer\PHPMailer;
 
-
 class BoletosController extends Controller
 {
 
     protected $prefixName = 'boletos';
 
     public function enviarBoletos() {
+        
         $params = request()->all();
         
         if(isset($params['clients']) && !empty($params['clients'])) {
@@ -23,7 +23,9 @@ class BoletosController extends Controller
             $listClients = Client::all();
         }      
         
-        $path = base_path("public_html/files/". $params['competencia']);
+        
+        $path = base_path("../public_html/files/". $params['competencia']);
+        
         try {
             $diretorio = dir($path);
         } catch (Exception $e) {
