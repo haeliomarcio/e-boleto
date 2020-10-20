@@ -108,8 +108,8 @@ class UsersController extends Controller
         $user = User::find($id);
         if($request->input('password')) {
             $validator = Validator::make($request->all(), [
-                'password' => 'required|min:6',
-                'password_confirmation' => 'required|confirmed|min:6'
+                'password' => 'required|confirmed|min:6',
+                'password_confirmation' => 'required|min:6'
             ]);
 
             if($validator->fails()) {

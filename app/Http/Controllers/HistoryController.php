@@ -30,7 +30,6 @@ class HistoryController extends Controller
                 ->orWhere('c.email', 'like', "%{$search}%")
                 ->orWhere('history.competence', 'like', "%{$search}%")
                 ->orWhere('history.status', 'like', "%{$search}%")
-                ->withTrashed()
                 ->paginate(10);
         } else {
             $context = $this->model->paginate(10);
